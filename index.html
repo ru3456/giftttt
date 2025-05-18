@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Surprise Gift</title>
+  <style>
+    body {
+      margin: 0;
+      background: #d0eaff;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .gift-box {
+      width: 220px;
+      height: 220px;
+      background: white;
+      border-radius: 15px;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .lid {
+      width: 100%;
+      height: 60px;
+      background: lightcoral;
+      border-radius: 15px 15px 0 0;
+      position: absolute;
+      top: 0;
+      transition: transform 0.6s ease;
+      z-index: 2;
+    }
+    .message {
+      display: none;
+      position: absolute;
+      top: 60px;
+      padding: 20px;
+      text-align: center;
+      color: #333;
+      font-size: 16px;
+      z-index: 1;
+    }
+    .message img {
+      width: 100px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    .gift-box.open .lid {
+      transform: rotateX(100deg);
+    }
+    .gift-box.open .message {
+      display: block;
+    }
+    .music {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="gift-box" onclick="openGift()">
+    <div class="lid"></div>
+    <div class="message">
+      <p>happy four months!<br>(congrats to me for tolerating your ass xoxo)<br>i made this cause you too cute to not be making this rn <3</p>
+      <img src="https://images.unsplash.com/photo-1601758123927-194d51b4b9cd?auto=format&fit=crop&w=400&q=80" alt="golden retriever">
+    </div>
+  </div>
+  <iframe class="music" width="0" height="0" src="https://www.youtube.com/embed/HnhAKiUumU8?autoplay=1&loop=1&playlist=HnhAKiUumU8" frameborder="0" allow="autoplay"></iframe>
+
+  <script>
+    function openGift() {
+      document.querySelector('.gift-box').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
+add gift file
